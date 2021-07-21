@@ -9,8 +9,9 @@ namespace snakeandladder
             
         public void gamestarts()
         {
-            int position = 0;
-            Console.WriteLine("position of player is " + position);
+            Random random = new Random();
+            int firstroll = random.Next(1, 7);
+            Console.WriteLine("player's new position is:" + firstroll);
         }
     }
 }
