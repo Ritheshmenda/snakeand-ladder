@@ -9,6 +9,7 @@ namespace snakeandladder
             
         public void gamestarts()
         {
+            int lastposition = 0;
             int initial = 0;
             while (initial < 100)
             {
@@ -22,7 +23,11 @@ namespace snakeandladder
                         Console.WriteLine("player position is :" + firstroll);
                         initial += firstroll;
                         if (initial > 100)
+                        {
                             initial -= firstroll;
+                            lastposition = initial;
+                            Console.WriteLine("player position will retained in :" + lastposition);
+                        }                   
                         Console.WriteLine("initial player position that is  :" + initial);
                         break;
                     case 2:
@@ -34,7 +39,7 @@ namespace snakeandladder
                         Console.WriteLine("initial player position that is  :" + initial);
                         break;
                     default:
-                        Console.WriteLine("no play");
+                        Console.WriteLine("chance denied");
                         break;
                 }
             }
